@@ -84,7 +84,7 @@
     font-family: Poppins;
     font-weight: normal;
     font-size: 20px;
-    
+
 
 }
 
@@ -102,7 +102,7 @@
     border: 3px solid gray;
     margin-top: 50px;
     margin-bottom: 50px;
-    
+
 
 }
 
@@ -112,6 +112,14 @@
 
     margin-top: 200px;
     padding: 0 15px 0 15px;
+
+}
+
+.content a {
+
+    text-decoration: underline;
+    color: inherit;
+
 
 }
 
@@ -155,7 +163,7 @@
 
 .section {
 
-    max-width: 1000px;
+    max-width: 1300px;
     margin: auto;
 
 }
@@ -165,6 +173,26 @@
     font-weight: bold;
     font-size: 28px;
     text-align: center;
+    padding: 20px 0;
+
+}
+
+.section .normaltext {
+
+    font-weight: normal;
+    font-size: 20px;
+    text-align: center;
+
+}
+
+.section .dimmediumtext {
+
+    font-weight: normal;
+    font-size: 16px;
+    text-align: center;
+    color: #505050;
+    padding-top: 50px;
+    padding-bottom: 20px;
 
 }
 
@@ -176,11 +204,128 @@
 
 }
 
-.section .text {
+.section .column2 {
+
+    float: left;
+    width: 50%;
+    text-align: center;
+
+}
+
+.section .column3 {
+
+    float: left;
+    width: 33.33%;
+    text-align: center;
+
+}
+
+.section .column4 {
+
+    float: left;
+    width: 25%;
+    text-align: center;
+
+}
+
+.section .column2 .heading,
+.section .column3 .heading,
+.section .column4 .heading {
+
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 0;
+
+}
+
+.section .column2 .normal,
+.section .column3 .normal,
+.section .column4 .normal {
 
     font-weight: normal;
-    font-size: 20px;
+    font-size: 16px;
+    padding: 0 20px;
+
+}
+
+@media screen and (max-width: 600px) {
+  .section .column2,
+  .section .column3,
+  .section .column4 {
+    width: 100%;
+  }
+}
+
+.section .row {
+
+    padding: 20px 0;
+
+}
+
+.section .row:after {
+
+    content: "";
+    display: table;
+    clear: both;
+
+}
+
+/* FAQ SECTION */
+
+.faqsection {
+
+    max-width: 800px;
+    margin: 0 auto;
+
+}
+
+.faqsection .largethicctext {
+
+    font-weight: bold;
+    font-size: 28px;
+    text-align: center;
+    padding: 20px 0;
+
+}
+
+.faqsection .collapse {
+
+    background-color: gainsboro;
+    cursor: pointer;
+    padding: 20px;
+    width: 100%;
+    border: none;
     text-align: left;
+    margin: 0 auto;
+    outline: none;
+    font-family: Poppins;
+    font-weight: bold;
+    font-size: 18px;
+
+}
+
+.faqsection .collapse:hover {
+
+    background-color: silver;
+
+}
+
+.faqsection .innercontent {
+
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: whitesmoke;
+    font-family: Poppins;
+    font-weight: normal;
+    font-size: 18px;
+
+}
+
+.faqsection .spacer {
+
+    padding: 10px;
 
 }
 
@@ -190,9 +335,9 @@
     color: black;
     text-align: center;
     border: 1px solid black;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    
+    margin-top: 100px;
+    margin-bottom: 100px;
+
 
 }
 
@@ -269,7 +414,7 @@
     font-weight: normal;
     font-size: 32px;
     text-align: center;
-    
+
 }
 
 .newsblock .button {
@@ -309,7 +454,7 @@
     border: 1px solid black;
     margin-top: 50px;
     margin-bottom: 50px;
-    
+
 
 }
 
@@ -325,7 +470,7 @@
 }
 
 .left {
-    
+
     float: left;
     flex: 50%;
 
@@ -353,7 +498,7 @@
     font-weight: normal;
     font-size: 18px;
     text-align: left;
-    
+
 }
 
 .section-link {
