@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Search - SGDG</title>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="search.js"></script>
+
+<link rel="stylesheet" href="/style/definitions.css">
+<link rel="stylesheet" href="/style/primarystyle.css">
+<link rel="stylesheet" href="/style/search.css">
+
+<script> 
+$(function(){
+  $("#header").load("/header/header.html"); 
+  $("#footer").load("/header/footer.html");
+});
+</script>
+
+</head>
+
+<div id="header"></div>
+
+<body>
+
+<div class="content">
+
+<div class="headerblock">
+
+    <p class="mega">Search</p>
+    <p class="mini">From projects to people to events to anything SGDG, find it all here.</p>
+    
+</div>
+
+<div id="searchbar">
+    <input type="text" id="searchbox" onkeyup="search()" placeholder="Search...">
+    <span class="underline"></span>
+    <div id="searchoptions">
+        <input id="searchprojects" type="checkbox" checked>
+        <label for="searchprojects">Projects</label>
+        <input id="searchpeople" type="checkbox">
+        <label for="searchpeople">People</label>
+        <input id="searchevents" type="checkbox">
+        <label for="searchevents">Events</label>
+    </div>
+</div>
+
+<div id="searchresults">
+
+</div>
+
+<script>
+
+prepare();
+feather.replace()
+
+</script>
+
+</div>
+
+</body>
+
+</html>

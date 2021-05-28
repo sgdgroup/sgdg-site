@@ -1,0 +1,127 @@
+#searchbar {
+
+    text-align: center;
+
+}
+
+#searchbox {
+
+    margin: auto;
+    width: 400px;
+    max-width: 500px;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid black;
+    position: relative;
+    font-family: Poppins;
+    font-size: 25px;
+    outline: none;
+
+}
+
+#searchbox :focus {
+
+    outline: none;
+
+}
+
+#searchresults {
+
+    margin-top: 100px;
+    padding: 0 15px 0 15px;
+
+}
+
+#searchoptions {
+    
+    padding-top: 20px;
+    font-size: 16px;
+    vertical-align: middle;
+
+}
+
+#searchoptions label {
+
+    padding-left: 0;
+    padding-right: 10px;
+
+}
+
+.searchblock {
+
+    max-width: 800px;
+    min-height: 150px;
+    margin: auto;
+    position: relative;
+
+}
+
+.searchblock .mini {
+
+    font-size: 16px;
+    text-align: right;
+
+}
+
+.searchblock .main {
+
+    font-weight: bold;
+    font-size: 24px;
+    text-align: left;
+    line-height: 80%;
+
+}
+
+.searchblock .sub {
+
+    font-weight: 800;
+    font-size: 14px;
+    text-align: left;
+    line-height: 10px;
+    
+}
+
+.searchblock .sub .notscream {
+
+    font-weight: normal;;
+
+}
+
+.searchblock .moresub {
+
+    font-weight: normal;
+    font-size: 16px;
+    text-align: left;
+    max-width: 100%;
+    line-height: 20px;
+    
+}
+
+.searchblock .vertical {
+
+    border-left: 6px solid green;
+    height: 500px;
+
+}
+
+.searchline {
+
+    max-width: 200px;
+    color: black;
+    text-align: center;
+    border: 1px solid gray;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+
+.largesearchline {
+
+    max-width: 400px;
+    color: black;
+    text-align: center;
+    border: 1px solid black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
