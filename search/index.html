@@ -12,9 +12,9 @@
 <link rel="stylesheet" href="/style/primarystyle.css">
 <link rel="stylesheet" href="/style/search.css">
 
-<script> 
+<script>
 $(function(){
-  $("#header").load("/header/header.html"); 
+  $("#header").load("/header/header.html");
   $("#footer").load("/header/footer.html");
 });
 </script>
@@ -31,18 +31,18 @@ $(function(){
 
     <p class="mega">Search</p>
     <p class="mini">From projects to people to events to anything SGDG, find it all here.</p>
-    
+
 </div>
 
 <div id="searchbar">
     <input type="text" id="searchbox" onkeyup="search()" placeholder="Search...">
     <span class="underline"></span>
     <div id="searchoptions">
-        <input id="searchprojects" type="checkbox" checked>
+        <input id="searchprojects" type="checkbox" onclick="search();" checked>
         <label for="searchprojects">Projects</label>
-        <input id="searchpeople" type="checkbox">
+        <input id="searchpeople" type="checkbox" onclick="search();">
         <label for="searchpeople">People</label>
-        <input id="searchevents" type="checkbox">
+        <input id="searchevents" type="checkbox" onclick="search();">
         <label for="searchevents">Events</label>
     </div>
 </div>

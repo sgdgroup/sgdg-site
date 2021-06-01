@@ -1,172 +1,232 @@
-var data = {};
+var data = [];
 
-var all = [];
+var checkboxProjects;
+var checkboxPeople;
+var checkboxEvents;
 
 function prepare() {
 
-    var list = read("registry.txt").split("\n");
-    
-    
-    for (var i = 0; i < list.length; i++) {
-    
-        var profile = read("/" + list[i] + "/profile.txt").split("\n");
-        
-        if (!(profile[0] in data)) data[profile[0]] = [];
-        
-        var item = new SearchItem(profile[0], profile[1], profile[2], profile[3]);
-        
-        data[profile[0]].push(item);
-        all.push(item);
-        
+    let info = read("registry.json");
+
+    let jsonData = JSON.parse(info);
+
+    let pr = jsonData.projects;
+
+    checkboxProjects = document.getElementById("searchprojects");
+    checkboxPeople = document.getElementById("searchpeople");
+    checkboxEvents = document.getElementById("searchevents");
+
+    for (let i = 0; i < pr.length; i++) {
+        let item = pr[i];
+        data.push(
+            new ProjectItem(item.name, item.url, item.type, item.description)
+        );
     }
-    
+
+    let pe = jsonData.people;
+
+    for (let i = 0; i < pe.length; i++) {
+        let item = pe[i];
+        data.push(
+            new PersonItem(item.name, item.url, item.role, item.skills)
+        );
+    }
 
 }
 
 window.onload = function() {
-    
+
     var res = document.getElementById("searchresults");
-    
-    var projs = data["Project"];
-    
-    for (var i = 0; i < projs.length; i++) {
-    
-        var el = element(projs[i]);
-        
-        res.appendChild(el);        
-//         if (i < projs.length - 1) {
-//             var line = document.createElement("hr");
-//             line.setAttribute("class", "searchline");
-//             res.appendChild(line);
-//         }
-    
+
+    for (let i = 0; i < data.length; i++) {
+        res.appendChild(data[i].element);
     }
-    
-    // var largeline = document.createElement("hr");
-//     largeline.setAttribute("class", "largesearchline");
-//     res.appendChild(largeline);
-    
-    var pers = data["Person"];
-    
-    for (var i = 0; i < pers.length; i++) {
-    
-        var el = element(pers[i]);
-        
-        res.appendChild(el);        
-        
-//         if (i < pers.length - 1) {
-//             var line = document.createElement("hr");
-//             line.setAttribute("class", "searchline");
-//             res.appendChild(line);
-//         }
-    }
-    
+
     search();
-
-}
-
-function element(item) {
-
-    var newEl = document.createElement("div");
-    newEl.setAttribute("class", "searchblock");
-    
-    var s1 = document.createElement("span");
-    s1.setAttribute("class", "notscream");
-    s1.textContent = " " + item.desc;
-    var p1 = document.createElement("p");
-    p1.setAttribute("class", "sub");
-    p1.textContent = item.type.toUpperCase();
-    p1.appendChild(s1);
-    newEl.appendChild(p1);
-        
-    var p2 = document.createElement("p");
-    p2.setAttribute("class", "main");
-    p2.textContent = item.name;
-    newEl.appendChild(p2);
-        
-    var p3 = document.createElement("p");
-    p3.setAttribute("class", "moresub");
-    p3.textContent = item.keywords;
-    newEl.appendChild(p3);
-        
-    item.element = newEl;
-        
-    return newEl;
 
 }
 
 function search() {
 
-    var input = document.getElementById("searchbox");
-    
-    var cont = false;
-    
-    var inp = null;
-    
-    if (input.value) {
-    
-        cont = true;
-        
-        if (input.value.includes(",")) {
-        
-            inp = [];
-            
-            var x = input.value.split(",");
-            
-            for (var i = 0; i < x.length; i++) {
-            
-                inp[inp.length] = x[i].trim().toLowerCase();
-            
-            }
-        
-        } else {
-        
-            inp = [input.value.toLowerCase()];
-        
-        }
-        
-    }
-    
+    var inputField = document.getElementById("searchbox");
 
-    for (var i = 0; i < all.length; i++) {
-    
-        var item = all[i];
-        
-        if (!cont) {
-        
+    var showAny = false;
+
+    var inp = null;
+
+    if (inputField.value) {
+
+        showAny = true;
+
+        if (inputField.value.includes(",")) {
+
+            inp = [];
+
+            let x = inputField.value.split(",");
+            for (let i = 0; i < x.length; i++) {
+                inp[inp.length] = x[i].trim().toLowerCase();
+            }
+
+        } else {
+
+            inp = [inputField.value.trim().toLowerCase()];
+
+        }
+
+    }
+
+    for (let i = 0; i < data.length; i++) {
+
+        let item = data[i];
+
+        if (!showAny) {
+
             item.element.style.display = "none";
             continue;
-        
+
         }
-        
-        var name = item.name.toLowerCase();
-        
-        var desc = item.desc.toLowerCase();
-        
-        var keys = null;
-        
-        if (item.type !== "Project")
-        
-            keys = item.keywords.toLowerCase();
-        
-        var done = false;
-        
-        for (var y = 0; y < inp.length; y++) {
-        
-            var x = inp[y];
-            
-            if (name.includes(x) || desc.includes(x) || (keys && keys.includes(x))) {
-        
-                item.element.style.display = "";
+
+        let name = item.name.toLowerCase();
+        let type = item.type.toLowerCase();
+
+        let desc = null;
+
+        let skills = null;
+
+        let done = false;
+
+        if (item instanceof ProjectItem) {
+            if (!checkboxProjects.checked) {
+                item.element.style.display = "none";
                 done = true;
-                break;
             }
-        
+            desc = item.description.toLowerCase();
         }
-        
+        if (item instanceof PersonItem) {
+            if (!checkboxPeople.checked) {
+                item.element.style.display = "none";
+                done = true;
+            }
+            skills = item.skills;
+        }
+
+
+        if (!done) {
+            for (let y = 0; y < inp.length; y++) {
+                let x = inp[y];
+
+                if (name.includes(x) || type.includes(x) || x === "all") {
+                    item.element.style.display = "";
+                    done = true;
+                    break;
+                }
+
+                if (desc !== null && desc.includes(x)) {
+                    item.element.style.display = "";
+                    done = true;
+                    break;
+                }
+
+                if (skills !== null) {
+                    for (let s = 0; s < skills.length; s++) {
+                        if (skills[s].toLowerCase().includes(x)) {
+                            item.element.style.display = "";
+                            done = true;
+                            break;
+                        }
+                    }
+                    if (done) {
+                        break;
+                    }
+                }
+
+            }
+        }
+
         if (!done) item.element.style.display = "none";
-    
+
+
     }
+
+}
+
+class ProjectItem {
+
+    constructor(name, url, type, description) {
+        this.name = name;
+        this.url = url;
+        this.type = type;
+        this.description = description;
+
+        var element = document.createElement("div");
+        element.setAttribute("class", "searchblock");
+
+        var s1 = document.createElement("span");
+        s1.setAttribute("class", "notscream");
+        s1.textContent = " " + type;
+        var p1 = document.createElement("p");
+        p1.setAttribute("class", "sub");
+        p1.textContent = "PROJECT";
+        p1.appendChild(s1);
+        element.appendChild(p1);
+
+        var p2 = document.createElement("p");
+        p2.setAttribute("class", "main");
+        p2.textContent = name;
+        element.appendChild(p2);
+
+        var p3 = document.createElement("p");
+        p3.setAttribute("class", "moresub");
+        p3.textContent = description;
+        element.appendChild(p3);
+        this.element = element;
+
+    }
+
+}
+
+class PersonItem {
+
+    constructor(name, url, type, skills) {
+        this.name = name;
+        this.url = url;
+        this.type = type;
+        this.skills = skills;
+
+        var element = document.createElement("div");
+        element.setAttribute("class", "searchblock");
+
+        var s1 = document.createElement("span");
+        s1.setAttribute("class", "notscream");
+        s1.textContent = " " + type;
+        var p1 = document.createElement("p");
+        p1.setAttribute("class", "sub");
+        p1.textContent = "PERSON";
+        p1.appendChild(s1);
+        element.appendChild(p1);
+
+        var p2 = document.createElement("p");
+        p2.setAttribute("class", "main");
+        p2.textContent = name;
+        element.appendChild(p2);
+
+        var p3 = document.createElement("p");
+        p3.setAttribute("class", "moresub");
+        var txt = "";
+        for (let i = 0; i < skills.length; i++) {
+
+            txt += skills[i];
+
+            if (i < skills.length - 1) txt += ", ";
+
+        }
+        p3.textContent = txt;
+        element.appendChild(p3);
+        this.element = element;
+
+    }
+
+
 
 }
 
@@ -174,29 +234,13 @@ function read(file) {
 
   var result = null;
   var xmlhttp = new XMLHttpRequest();
-  
+
   xmlhttp.open("GET", file, false);
   xmlhttp.send();
-  
+
   if (xmlhttp.status == 200) {
     result = xmlhttp.responseText;
   }
-  
+
   return result;
-}
-
-class SearchItem {
-
-    constructor(type, name, desc, keywords) {
-    
-        this.type = type;
-        this.name = name;
-        this.desc = desc;
-        this.keywords = keywords;
-        this.element = null;
-    
-    }
-    
-    
-
 }

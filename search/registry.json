@@ -1,0 +1,41 @@
+{
+    "projects": [
+        {
+            "name": "Test Project",
+            "url": "testproject1",
+            "type": "Video Game",
+            "description": "A game where you kill humans."
+        }
+    ],
+    "people": [
+        {
+            "name": "Test User",
+            "url": "testuser1",
+            "role": "Charter Member",
+            "skills": [
+                "Programming",
+                "Game Development"
+            ]
+        },
+        {
+            "name": "Test User 2",
+            "url": "testuser2",
+            "role": "Charter Member",
+            "skills": [
+                "Programming",
+                "Game Development",
+                "Test test"
+            ]
+        },
+        {
+            "name": "Test User 3",
+            "url": "testuser3",
+            "role": "Charter Member",
+            "skills": [
+                "Programming",
+                "Game Development",
+                "Game Design"
+            ]
+        }
+    ]
+}

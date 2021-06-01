@@ -1,4 +1,0 @@
-Person
-Test User 3
-Charter Member
-Programming, Game Development, Game Design
