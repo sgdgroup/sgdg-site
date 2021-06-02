@@ -170,9 +170,12 @@ class ProjectItem {
         p1.appendChild(s1);
         element.appendChild(p1);
 
+        var a2 = document.createElement("a");
+        a2.setAttribute("href", url);
+        a2.textContent = name;
         var p2 = document.createElement("p");
         p2.setAttribute("class", "main");
-        p2.textContent = name;
+        p2.appendChild(a2);
         element.appendChild(p2);
 
         var p3 = document.createElement("p");
@@ -205,9 +208,12 @@ class PersonItem {
         p1.appendChild(s1);
         element.appendChild(p1);
 
+        var a2 = document.createElement("a");
+        a2.setAttribute("href", url);
+        a2.textContent = name;
         var p2 = document.createElement("p");
         p2.setAttribute("class", "main");
-        p2.textContent = name;
+        p2.appendChild(a2);
         element.appendChild(p2);
 
         var p3 = document.createElement("p");

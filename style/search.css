@@ -56,6 +56,30 @@
 
 }
 
+.searchblock a {
+
+    text-decoration: none;
+    display: inline-block;
+    line-height: 25px;
+
+}
+
+.searchblock a:after {
+
+    display: block;
+    content: '';
+    border-bottom: 2px solid black;
+    transform: scaleX(0);
+    transition: transform 250ms ease-out;
+    transform-origin: 100% 50%;
+
+}
+
+.searchblock a:hover:after {
+    transform: scaleX(1);
+    transform-origin: 0% 50%;
+}
+
 .searchblock .mini {
 
     font-size: 16px;
