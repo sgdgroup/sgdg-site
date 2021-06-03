@@ -1,4 +1,5 @@
 var data = [];
+var allSkills = null;
 
 var checkboxProjects;
 var checkboxPeople;
@@ -9,6 +10,8 @@ function prepare() {
     let info = read("registry.json");
 
     let jsonData = JSON.parse(info);
+
+    allSkills = jsonData.skills;
 
     let pr = jsonData.projects;
 
@@ -148,6 +151,8 @@ function search() {
 
     }
 
+    feather.replace();
+
 }
 
 class ProjectItem {
@@ -196,29 +201,32 @@ class PersonItem {
         this.type = type;
         this.skills = skills;
 
-        var element = document.createElement("div");
+        let element = document.createElement("div");
         element.setAttribute("class", "searchblock");
 
-        var s1 = document.createElement("span");
+        let col1 = document.createElement("div");
+        col1.setAttribute("class", "left");
+
+        let s1 = document.createElement("span");
         s1.setAttribute("class", "notscream");
         s1.textContent = " " + type;
-        var p1 = document.createElement("p");
+        let p1 = document.createElement("p");
         p1.setAttribute("class", "sub");
         p1.textContent = "PERSON";
         p1.appendChild(s1);
-        element.appendChild(p1);
+        col1.appendChild(p1);
 
-        var a2 = document.createElement("a");
+        let a2 = document.createElement("a");
         a2.setAttribute("href", url);
         a2.textContent = name;
-        var p2 = document.createElement("p");
+        let p2 = document.createElement("p");
         p2.setAttribute("class", "main");
         p2.appendChild(a2);
-        element.appendChild(p2);
+        col1.appendChild(p2);
 
-        var p3 = document.createElement("p");
+        let p3 = document.createElement("p");
         p3.setAttribute("class", "moresub");
-        var txt = "";
+        let txt = "";
         for (let i = 0; i < skills.length; i++) {
 
             txt += skills[i];
@@ -227,7 +235,33 @@ class PersonItem {
 
         }
         p3.textContent = txt;
-        element.appendChild(p3);
+        col1.appendChild(p3);
+
+        let col2 = document.createElement("div");
+        col2.setAttribute("class", "right");
+
+        for (let i = 0; i < skills.length; i++) {
+
+            let skillItem = allSkills[skills[i]];
+            let div = document.createElement("div");
+            div.setAttribute("class", "iconline");
+            div.setAttribute("style", "display: flex;");
+            let p = document.createElement("p");
+            p.setAttribute("class", "subright");
+            let ic = document.createElement("i");
+            ic.setAttribute("data-feather", skillItem.icon);
+            ic.setAttribute("width", 16);
+            ic.setAttribute("height", 16);
+            ic.setAttribute("style", "padding-right: 8px;")
+            div.appendChild(ic);
+            p.textContent = skillItem.text;
+            div.appendChild(p);
+            col2.appendChild(div);
+
+        }
+
+        element.appendChild(col1);
+        element.appendChild(col2);
         this.element = element;
 
     }

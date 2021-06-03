@@ -13,8 +13,8 @@
             "url": "/testuser1",
             "role": "Charter Member",
             "skills": [
-                "Programming",
-                "Game Development"
+                "programming",
+                "art"
             ]
         },
         {
@@ -22,9 +22,9 @@
             "url": "/testuser2",
             "role": "Charter Member",
             "skills": [
-                "Programming",
-                "Game Development",
-                "Test test"
+                "programming",
+                "game-design",
+                "art"
             ]
         },
         {
@@ -32,10 +32,32 @@
             "url": "/testuser3",
             "role": "Charter Member",
             "skills": [
-                "Programming",
-                "Game Development",
-                "Game Design"
+                "programming",
+                "game-design"
             ]
         }
-    ]
+    ],
+    "skills": {
+        "programming": {
+            "icon": "code",
+            "text": "Programming"
+        },
+        "ui-design": {
+            "icon": "layout",
+            "text": "UI Design"
+        },
+        "game-design": {
+            "icon": "image",
+            "text": "Game Design"
+        },
+        "art": {
+            "icon": "edit-2",
+            "text": "Art"
+        },
+        "music": {
+            "icon": "headphones",
+            "text": "Music Composition"
+        }
+
+    }
 }

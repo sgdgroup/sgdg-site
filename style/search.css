@@ -56,6 +56,25 @@
 
 }
 
+.searchblock .left {
+
+    float: left;
+    width: 85%;
+
+}
+
+.searchblock .right {
+
+    float: left;
+    width: 15%;
+
+}
+
+.searchblock .right i {
+    float: left;
+    display: flex;
+}
+
 .searchblock a {
 
     text-decoration: none;
@@ -118,6 +137,18 @@
     text-align: left;
     max-width: 100%;
     line-height: 20px;
+
+}
+
+.searchblock .subright {
+
+    font-weight: normal;
+    font-size: 14px;
+    text-align: left;
+    max-width: 100%;
+    line-height: 5px;
+    white-space: pre;
+    display: inline-block;
 
 }
 
