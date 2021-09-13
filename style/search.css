@@ -50,23 +50,13 @@
 .searchblock {
 
     max-width: 500px;
-    min-height: 150px;
-    margin: auto;
+    min-height: 100px;
     position: relative;
-
-}
-
-.searchblock .left {
-
-    float: left;
-    width: 75%;
-
-}
-
-.searchblock .right {
-
-    float: left;
-    width: 25%;
+    display: block;
+    background-color: #FFFFFF;
+    margin: 10px auto;
+    padding: 10px;
+    box-shadow: 0 2px 4px 0 #00000032, 0 2px 8px 0 #00000030
 
 }
 
@@ -98,6 +88,7 @@
 
     font-size: 16px;
     text-align: right;
+    margin: 0;
 
 }
 
@@ -112,10 +103,12 @@
 
 }
 
-.search-name {
+.skills {
+    position: absolute;
+    top: 10px;
+    right: 2px;
     display: flex;
     align-items: center;
-
 }
 
 .skill-icon {
@@ -173,13 +166,14 @@
     font-weight: 800;
     font-size: 14px;
     text-align: left;
-    line-height: 10px;
+
+
 
 }
 
 .searchblock .sub .notscream {
 
-    font-weight: normal;;
+    font-weight: normal;
 
 }
 

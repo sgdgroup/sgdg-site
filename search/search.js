@@ -205,30 +205,26 @@ class PersonItem {
         let element = document.createElement('div');
         element.setAttribute('class', 'searchblock');
 
-        let col1 = document.createElement('div');
-        col1.setAttribute('class', 'left');
+        let typeSpan = document.createElement('span');
+        typeSpan.setAttribute('class', 'notscream');
+        typeSpan.textContent = ' ' + type;
+        let typeP = document.createElement('p');
+        typeP.setAttribute('class', 'sub');
+        typeP.textContent = 'PERSON';
+        typeP.appendChild(typeSpan);
+        element.appendChild(typeP);
 
-        let s1 = document.createElement('span');
-        s1.setAttribute('class', 'notscream');
-        s1.textContent = ' ' + type;
-        let p1 = document.createElement('p');
-        p1.setAttribute('class', 'sub');
-        p1.textContent = 'PERSON';
-        p1.appendChild(s1);
-        col1.appendChild(p1);
+        let nameLink = document.createElement('a');
+        nameLink.setAttribute('href', url);
+        nameLink.textContent = name;
 
-        let a2 = document.createElement('a');
-        a2.setAttribute('href', url);
-        a2.textContent = name;
+        let nameP = document.createElement('p');
+        nameP.setAttribute('class', 'main');
+        nameP.appendChild(nameLink);
+        element.appendChild(nameP);
 
-        let nameDiv = document.createElement('div');
-        nameDiv.setAttribute('class', 'search-name');
-
-        let p2 = document.createElement('p');
-        p2.setAttribute('class', 'main');
-        p2.appendChild(a2);
-        nameDiv.appendChild(p2);
-
+        let skillsDiv = document.createElement('div');
+        skillsDiv.className = 'skills';
         for (let i = 0; i < skills.length; i++) {
 
             let skillDiv = document.createElement('div');
@@ -237,10 +233,10 @@ class PersonItem {
             //let p = document.createElement('p');
             //p.setAttribute('class', 'subright');
             let ic = document.createElement('i');
-            ic.setAttribute('class', 'skill-icon');
+            ic.className = 'skill-icon';
             ic.setAttribute('data-feather', skillItem.icon);
-            ic.setAttribute('width', 20);
-            ic.setAttribute('height', 20);
+            ic.setAttribute('width', 24);
+            ic.setAttribute('height', 24);
             skillDiv.appendChild(ic);
 
             let tooltip = document.createElement('div');
@@ -249,24 +245,19 @@ class PersonItem {
             tooltipP.textContent = skillItem.text;
             tooltip.appendChild(tooltipP);
             skillDiv.appendChild(tooltip);
-            nameDiv.appendChild(skillDiv);
+            skillsDiv.appendChild(skillDiv);
             //p.textContent = skillItem.text;
             //div.appendChild(p);
             //p2.appendChild(div);
 
         }
-        col1.appendChild(nameDiv);
+        element.appendChild(skillsDiv);
 
-        let p3 = document.createElement('p');
-        p3.setAttribute('class', 'moresub');
-        p3.textContent = description;
-        col1.appendChild(p3);
+        let descP = document.createElement('p');
+        descP.setAttribute('class', 'moresub');
+        descP.textContent = description;
+        element.appendChild(descP);
 
-        let col2 = document.createElement('div');
-        col2.setAttribute('class', 'right');
-
-        element.appendChild(col1);
-        element.appendChild(col2);
         this.element = element;
 
     }
