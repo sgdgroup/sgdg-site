@@ -12,6 +12,7 @@
             "name": "Test User",
             "url": "/testuser1",
             "role": "Charter Member",
+            "description": "Test hello",
             "skills": [
                 "programming",
                 "art"
@@ -21,6 +22,7 @@
             "name": "Test User 2",
             "url": "/testuser2",
             "role": "Charter Member",
+            "description": "Test hello 2",
             "skills": [
                 "programming",
                 "game-design",
@@ -31,6 +33,7 @@
             "name": "Test User 3",
             "url": "/testuser3",
             "role": "Charter Member",
+            "description": "Test hello 3!!!",
             "skills": [
                 "programming",
                 "game-design"
