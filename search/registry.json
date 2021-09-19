@@ -2,7 +2,7 @@
     "projects": [
         {
             "name": "Test Project",
-            "url": "/testproject1",
+            "url": "/p/testproject1",
             "type": "Video Game",
             "description": "A game where you kill humans."
         }
@@ -10,7 +10,7 @@
     "people": [
         {
             "name": "Test User",
-            "url": "/testuser1",
+            "url": "/u/testuser1",
             "role": "Charter Member",
             "description": "Test hello",
             "skills": [
@@ -20,7 +20,7 @@
         },
         {
             "name": "Test User 2",
-            "url": "/testuser2",
+            "url": "/u/testuser2",
             "role": "Charter Member",
             "description": "Test hello 2",
             "skills": [
@@ -31,7 +31,7 @@
         },
         {
             "name": "Test User 3",
-            "url": "/testuser3",
+            "url": "/u/testuser3",
             "role": "Charter Member",
             "description": "Test hello 3!!!",
             "skills": [
