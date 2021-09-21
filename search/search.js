@@ -6,8 +6,15 @@ var checkboxPeople;
 var checkboxEvents;
 
 function prepare() {
-
-    let info = read('registry.json');
+    let info = null;
+    try {
+        info = read('https://auth.dilanxd.com/sgdg/api?q=all');
+    } finally {
+        if (!info) {
+            document.getElementById('noconnect').style.display = '';
+            return;
+        }
+    }
 
     let jsonData = JSON.parse(info);
 
