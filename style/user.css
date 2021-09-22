@@ -1,4 +1,7 @@
-
+.error {
+    color: red;
+    text-align: center;
+}
 .name {
     font-family: Poppins;
     font-size: 32px;
