@@ -18,7 +18,17 @@ function prepare() {
 
     let jsonData = JSON.parse(info);
 
-    allSkills = jsonData.skills;
+    let sk = null;
+    try {
+        sk = JSON.parse(read('https://auth.dilanxd.com/sgdg/api?q=skills'));
+    } finally {
+        if (!sk) {
+            document.getElementById('noconnect').style.display = '';
+            return;
+        }
+    }
+
+    allSkills = sk.skills;
 
     let pr = jsonData.projects;
 
@@ -253,9 +263,6 @@ class PersonItem {
             tooltip.appendChild(tooltipP);
             skillDiv.appendChild(tooltip);
             skillsDiv.appendChild(skillDiv);
-            //p.textContent = skillItem.text;
-            //div.appendChild(p);
-            //p2.appendChild(div);
 
         }
         element.appendChild(skillsDiv);

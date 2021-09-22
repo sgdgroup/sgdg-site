@@ -122,45 +122,6 @@
     color: blue;
 }
 
-.hover-wrap {
-  position: relative;
-}
-
-.hover-wrap .hover-content {
-  display: inline-block;
-  visibility: hidden;
-  position: absolute;
-  bottom: 100%;
-  left: 10%;
-  right: 10%;
-  background-color: #222222CC;
-  color: white;
-  width: 150px;
-  height: auto;
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  border-radius: 5px;
-  opacity: 0;
-  transition: visibility 0.2s, opacity 0.2s ease-out;
-
-}
-
-.hover-wrap .hover-content p {
-    margin: 0;
-    padding: 8px;
-    text-align: center;
-    font-family: Poppins;
-    font-size: 14px;
-    color: white;
-
-}
-
-.hover-wrap:hover .hover-content {
-  display: inline-block;
-  visibility: visible;
-  opacity: 1;
-}
-
 .searchblock .sub {
 
     font-weight: 800;
