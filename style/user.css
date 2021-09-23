@@ -11,6 +11,13 @@
     margin: 0;
 }
 
+.avatar {
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 12%;
+}
+
 .about {
     padding: 20px;
     padding-left: 50px;
@@ -33,14 +40,14 @@
 .cards {
     display: grid;
     grid-template-rows: auto;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
     row-gap: 20px;
 }
 
 .long-cards {
     display: grid;
     grid-template-rows: auto;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     row-gap: 20px;
 }
 

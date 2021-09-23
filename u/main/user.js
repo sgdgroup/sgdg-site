@@ -34,6 +34,11 @@ function name() {
     let div = document.createElement('div');
     div.className = 'name-div';
 
+    let avatar = document.createElement('img');
+    avatar.className = 'avatar';
+    avatar.setAttribute('src', `https://www.gravatar.com/avatar/` + user.gravatar_hash + '?s=100&d=mp');
+    div.appendChild(avatar);
+
     let name = document.createElement('p');
     name.className = 'name';
     name.innerText = user.name;
