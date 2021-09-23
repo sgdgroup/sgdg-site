@@ -44,33 +44,6 @@ function name() {
     name.innerText = user.name;
     div.appendChild(name);
 
-    // let skills = document.createElement('div');
-    // skills.className = 'skills';
-    //
-    // let sk = user.skills;
-    // for (let i = 0; i < sk.length; i++) {
-    //
-    //     let skill = document.createElement('div');
-    //     skill.className = 'hover-wrap';
-    //     let skillItem = allSkills[sk[i]];
-    //     let ic = document.createElement('i');
-    //     ic.className = 'skill-icon';
-    //     ic.setAttribute('data-feather', skillItem.icon);
-    //     ic.setAttribute('width', 24);
-    //     ic.setAttribute('height', 24);
-    //     skill.appendChild(ic);
-    //
-    //     let tooltip = document.createElement('div');
-    //     tooltip.className = 'hover-content';
-    //     let tooltipP = document.createElement('p');
-    //     tooltipP.textContent = skillItem.text;
-    //     tooltip.appendChild(tooltipP);
-    //     skill.appendChild(tooltip);
-    //     skills.appendChild(skill);
-    //
-    // }
-    // div.appendChild(skills);
-
     userDiv.appendChild(div);
 
 }

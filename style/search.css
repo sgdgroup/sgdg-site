@@ -56,7 +56,8 @@
     background-color: #FFFFFF;
     margin: 10px auto;
     padding: 10px;
-    box-shadow: 0 2px 4px 0 #00000032, 0 2px 8px 0 #00000030
+    box-shadow: 0 2px 4px 0 #00000032, 0 2px 8px 0 #00000030;
+    white-space: nowrap;
 
 }
 
@@ -145,6 +146,7 @@
     text-align: left;
     max-width: 100%;
     line-height: 20px;
+    overflow: hidden;
 
 }
 

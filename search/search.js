@@ -45,8 +45,9 @@ function prepare() {
 
     let pe = jsonData.people;
 
-    for (let i = 0; i < pe.length; i++) {
-        let item = pe[i];
+    let peKeys = Object.keys(pe);
+    for (let i = 0; i < peKeys.length; i++) {
+        let item = pe[peKeys[i]];
         data.push(
             new PersonItem(item.name, item.url, item.role, item.description, item.skills)
         );
