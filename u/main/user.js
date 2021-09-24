@@ -50,7 +50,7 @@ function name() {
     let role = document.createElement('p');
     role.className = 'role';
     role.innerText = user.role;
-    div.appendchild(role);
+    div.appendChild(role);
 
     userDiv.appendChild(div);
 
