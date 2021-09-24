@@ -2,17 +2,15 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>User - SGDG</title>
+        <title>%USERNAME% - SGDG</title>
         <link rel="stylesheet" href="/style/definitions.css">
         <link rel="stylesheet" href="/style/style.css">
         <link rel="stylesheet" href="/style/user.css">
         <link rel="stylesheet" href="/fontawesome/css/all.css">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://unpkg.com/feather-icons"></script>
-
     </head>
     <body>
-
         <script>
             $(function(){
                 $("#header").load("/header/header.html");
@@ -20,21 +18,13 @@
             });
             feather.replace();
         </script>
-
         <div id="header"></div>
         <div class="content">
             <p id="noconnect" class="error" style="display: none;"></p>
             <div id="user"></div>
-
         </div>
-
         <script src="/u/main/user.js"></script>
-        <script>
-            load('test')
-        </script>
-
-
+        <script>load('%USERNAME%')</script>
         <div id="footer"></div>
-
     </body>
 </html>
