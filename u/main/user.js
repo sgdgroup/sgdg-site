@@ -1,6 +1,7 @@
 var user = null;
 var allSkills = null;
 var allLinks = null;
+var allExtra = null;
 
 var userDiv = document.getElementById('user');
 
@@ -17,6 +18,7 @@ function load(username) {
 
     allSkills = sk.skills;
     allLinks = sk.links;
+    allExtra = sk.extra;
 
     if (user.error) {
         document.getElementById('noconnect').style.display = '';
@@ -27,6 +29,7 @@ function load(username) {
     about();
     skills();
     links();
+    extra();
 
 }
 
@@ -36,7 +39,7 @@ function name() {
 
     let avatar = document.createElement('img');
     avatar.className = 'avatar';
-    avatar.setAttribute('src', `https://www.gravatar.com/avatar/` + user.gravatar_hash + '?s=100&d=mp');
+    avatar.setAttribute('src', `https://www.gravatar.com/avatar/` + user.gravatar_hash + '?s=150&d=mp');
     div.appendChild(avatar);
 
     let name = document.createElement('p');
@@ -121,16 +124,20 @@ function links() {
     linkList.className = 'long-cards linked';
 
 
-    let links = user.links;
+    let linkSection = user.links;
+    let links = Object.keys(linkSection);
+
+
     for (let i = 0; i < links.length; i++) {
 
-        let linkItem = links[i];
-        let linkStatic = allLinks[linkItem.type];
+        let linkKey = links[i];
+        let linkValue = linkSection[linkKey];
+        let linkStatic = allLinks[linkKey];
 
         let anchor = document.createElement('a');
         anchor.className = 'card-link';
         if (linkStatic.url) {
-            anchor.setAttribute('href', linkStatic.url.replaceAll('%VALUE%', linkItem.value));
+            anchor.setAttribute('href', linkStatic.url.replaceAll('%VALUE%', linkValue));
         }
 
         let link = document.createElement('div');
@@ -147,7 +154,7 @@ function links() {
 
         let value = document.createElement('p');
         value.className = 'card-value';
-        value.innerText = linkItem.value;
+        value.innerText = linkValue;
         link.appendChild(value);
 
         anchor.appendChild(link);
@@ -155,6 +162,36 @@ function links() {
     }
 
     div.appendChild(linkList);
+
+    userDiv.appendChild(div);
+
+}
+
+function extra() {
+
+    let div = document.createElement('div');
+    div.className = 'extra';
+
+    let title = document.createElement('p');
+    title.className = 'title';
+    title.innerText = 'More Information';
+    div.appendChild(title);
+
+    let extraSection = user.extra;
+    let extra = Object.keys(extraSection);
+
+    let extraList = document.createElement('div');
+    for (let i = 0; i < extra.length; i++) {
+
+        let extraKey = extra[i];
+        let extraValue = extraSection[extraKey];
+        let extraDisplay = allExtra[extraKey].title;
+
+        let text = document.createElement('p');
+        text.className = 'extra-text';
+        text.innerHTML = `<span style="font-weight: bold;">${extraDisplay}: </span>${extraValue}`;
+        div.appendChild(text);
+    }
 
     userDiv.appendChild(div);
 

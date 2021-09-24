@@ -2,6 +2,11 @@
     color: red;
     text-align: center;
 }
+
+#user {
+    margin: 0 auto;
+    max-width: 1000px;
+}
 .name {
     font-family: Poppins;
     font-size: 32px;
@@ -28,26 +33,32 @@
 }
 
 .skills {
-    padding: 20px;
-    padding-left: 50px;
+    padding: 20px 50px;
 }
 
 .links {
-    padding: 20px;
-    padding-left: 50px;
+    padding: 20px 50px;
+}
+
+.extra {
+    padding: 20px 50px;
+}
+
+.extra-text {
+
 }
 
 .cards {
     display: grid;
     grid-template-rows: auto;
-    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    grid-template-columns: repeat(auto-fit, 170px);
     row-gap: 20px;
 }
 
 .long-cards {
     display: grid;
     grid-template-rows: auto;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-template-columns: repeat(auto-fit, 270px);
     row-gap: 20px;
 }
 
