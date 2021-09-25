@@ -568,6 +568,7 @@
   border-radius: 5px;
   opacity: 0;
   transition: visibility 0.2s, opacity 0.2s ease-out;
+  white-space: normal;
 
 }
 
