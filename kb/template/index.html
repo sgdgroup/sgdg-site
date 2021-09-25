@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>TITLE - KB - SGDG</title>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://unpkg.com/feather-icons"></script>
+        <link rel="stylesheet" href="/style/definitions.css">
+        <link rel="stylesheet" href="/style/style.css">
+        <link rel="stylesheet" href="/style/kb.css">
+        <script>
+            $(function(){
+              $("#header").load("/header/header.html");
+              $("#footer").load("/header/footer.html");
+            });
+            feather.replace();
+        </script>
+    </head>
+    <body>
+        <div id="header"></div>
+
+        <div class="content">
+            <div class="kb-article-header">
+                <p class="kb">Knowledge Base</p>
+                <p class="subject">TITLE</p>
+            </div>
+
+            <div class="kb-article-section">
+                <p class="h">HEADER</p>
+                <p>CONTENT</p>
+            </div>
+        </div>
+
+        <div id="footer"></div>
+    </body>
+</html>

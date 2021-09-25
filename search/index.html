@@ -1,66 +1,56 @@
 <!DOCTYPE html>
 <html>
-<head>
+    <head>
 
-<title>Search - SGDG</title>
+        <title>Search - SGDG</title>
 
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="https://unpkg.com/feather-icons"></script>
-<script src="search.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://unpkg.com/feather-icons"></script>
+        <script src="search.js"></script>
 
-<link rel="stylesheet" href="/style/definitions.css">
-<link rel="stylesheet" href="/style/style.css">
-<link rel="stylesheet" href="/style/search.css">
+        <link rel="stylesheet" href="/style/definitions.css">
+        <link rel="stylesheet" href="/style/style.css">
+        <link rel="stylesheet" href="/style/search.css">
 
-<script>
-$(function(){
-  $("#header").load("/header/header.html");
-});
-</script>
+        <script>
+            $(function(){
+              $("#header").load("/header/header.html");
+            });
+        </script>
 
-</head>
+    </head>
 
-<div id="header"></div>
+    <body>
+        <div id="header"></div>
+        <div class="content">
 
-<body>
+            <div class="headerblock">
+                <p class="mega">Search</p>
+                <p class="mini">From projects to people to events to anything SGDG, find it all here.</p>
+            </div>
 
-<div class="content">
+            <div id="searchbar">
+                <input type="text" id="searchbox" onkeyup="search()" placeholder="Search...">
+                <span class="underline"></span>
+                <div id="searchoptions">
+                    <input id="searchprojects" type="checkbox" onclick="search();" checked>
+                    <label for="searchprojects">Projects</label>
+                    <input id="searchpeople" type="checkbox" onclick="search();">
+                    <label for="searchpeople">People</label>
+                    <input id="searchevents" type="checkbox" onclick="search();">
+                    <label for="searchevents">Events</label>
+                </div>
+                <p id="noconnect" style="color: red; display: none;">
+                    Unable to connect to the SGDG API. (AUTH-S100)
+                </p>
+            </div>
 
-<div class="headerblock">
+            <div id="searchresults"></div>
 
-    <p class="mega">Search</p>
-    <p class="mini">From projects to people to events to anything SGDG, find it all here.</p>
-</div>
-
-<div id="searchbar">
-    <input type="text" id="searchbox" onkeyup="search()" placeholder="Search...">
-    <span class="underline"></span>
-    <div id="searchoptions">
-        <input id="searchprojects" type="checkbox" onclick="search();" checked>
-        <label for="searchprojects">Projects</label>
-        <input id="searchpeople" type="checkbox" onclick="search();">
-        <label for="searchpeople">People</label>
-        <input id="searchevents" type="checkbox" onclick="search();">
-        <label for="searchevents">Events</label>
-    </div>
-    <p id="noconnect" style="color: red; display: none;">
-        Unable to connect to the SGDG API. (AUTH-S100)
-    </p>
-</div>
-
-<div id="searchresults">
-
-</div>
-
-<script>
-
-prepare();
-feather.replace()
-
-</script>
-
-</div>
-
-</body>
-
+            <script>
+                prepare();
+                feather.replace()
+            </script>
+        </div>
+    </body>
 </html>

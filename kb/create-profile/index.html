@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Create Profile - KB - SGDG</title>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://unpkg.com/feather-icons"></script>
+        <link rel="stylesheet" href="/style/definitions.css">
+        <link rel="stylesheet" href="/style/style.css">
+        <link rel="stylesheet" href="/style/kb.css">
+        <script>
+            $(function(){
+              $("#header").load("/header/header.html");
+              $("#footer").load("/header/footer.html");
+            });
+            feather.replace();
+        </script>
+    </head>
+    <body>
+        <div id="header"></div>
+
+        <div class="content">
+            <div class="kb-article-header">
+                <p class="kb">Knowledge Base</p>
+                <p class="subject">Creating your SGDG Profile</p>
+            </div>
+
+            <div class="kb-article-section">
+                <p class="h">Create</p>
+                <ol>
+                    <li>Get started by clicking the 'Person' icon on the right side of the navigation bar at the top of this website.</li>
+                    <li>If you don't already have an active session, you'll be prompted to log in to continue. <strong>You'll need to log in with your Northwestern Google account.</strong> Select 'Sign in with Google', and, when redirected to the Google sign-in page, continue with your Northwestern account.</li>
+                    <li>You'll be prompted to enter your full name. This is the name that'll appear in results of SGDG Search and on your profile. You can't change this after setting it unless you contact us.</li>
+                    <p class="mid">At this point, the server will check to make sure you're using a valid Northwestern email AND that you've already registered for SGDG. If something's missing, it'll let you know and give you options to resolve the issue.</p>
+                    <li>You'll then be prompted to enter a username for SGDG. This is a lowercase alphanumeric no-space username primarily for your SGDG Profile URL. To keep things simple, it's recommended that you try just your first name. If it says it's taken, you can try appending your last initial or last name or something. Don't make it something dumb though or we'll remove it.</li>
+                    <li>That's it! A few things will happen behind-the-scenes to set up everything for you, and you'll be redirected to the profile edit page.</li>
+                </ol>
+            </div>
+            <div class="kb-article-section">
+                <p class="h">View</p>
+                <p>Now that you've setup your account, you and anyone else can access it at sgdgroup.org/u/yourUsername. It'll also appear in SGDG Search. You should appear in search results immediately, but it may take a few minutes for your profile page to prepare (until it's ready, it'll just say page not found).</p>
+            </div>
+            <div class="kb-article-section">
+                <p class="h">Edit</p>
+                <p>You'll want to edit your profile by adding a profile picture, adding some descriptions, selecting your interests and skills, adding some of your web presence, and more. <a href="/kb/manage-profile">Learn how to manage your profile properly.</a></p>
+            </div>
+        </div>
+
+        <div id="footer"></div>
+    </body>
+</html>

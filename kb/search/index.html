@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Search - KB - SGDG</title>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://unpkg.com/feather-icons"></script>
+        <link rel="stylesheet" href="/style/definitions.css">
+        <link rel="stylesheet" href="/style/style.css">
+        <link rel="stylesheet" href="/style/kb.css">
+        <script>
+            $(function(){
+              $("#header").load("/header/header.html");
+              $("#footer").load("/header/footer.html");
+            });
+            feather.replace();
+        </script>
+    </head>
+    <body>
+        <div id="header"></div>
+
+        <div class="content">
+            <div class="kb-article-header">
+                <p class="kb">Knowledge Base</p>
+                <p class="subject">Using SGDG Search</p>
+            </div>
+
+            <div class="kb-article-section">
+                <p class="h">About</p>
+                <p><a href="/search">SGDG Search</a> is a great way for you to find projects, people, events, and more SGDG-related things. We've included a bunch of functionality into this search feature, but we hope to add more as needed.</p>
+            </div>
+            <div class="kb-article-section">
+                <p class="h">Searching</p>
+                <p>You can filter the results by type using the checkboxes below the search bar. Only results for types that are checked will appear.</p>
+                <p>You can search for projects by name, project type, and description.</p>
+                <p>You can search for people by name, role, description, and interests/skills.</p>
+                <p>You can include more than one search term by separating terms with commas (,) in the search bar. Results are produced based on whether they match any of the terms ('OR'). For example, if you search for people by typing 'programming,game design', any person that has at least one of those interests/skills will appear in the results.</p>
+                <p>You can type 'all' to display literally everything. For example, if you want a list of all SGDG members, check only the 'People' box and type 'all'.</p>
+            </div>
+        </div>
+
+        <div id="footer"></div>
+    </body>
+</html>

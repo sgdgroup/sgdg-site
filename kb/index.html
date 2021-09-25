@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Knowledge Base - SGDG</title>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://unpkg.com/feather-icons"></script>
+
+        <link rel="stylesheet" href="/style/definitions.css">
+        <link rel="stylesheet" href="/style/style.css">
+        <link rel="stylesheet" href="/style/kb.css">
+
+        <script>
+            $(function(){
+              $("#header").load("/header/header.html");
+              $("#footer").load("/header/footer.html");
+            });
+            feather.replace();
+        </script>
+    </head>
+    <body>
+        <div id="header"></div>
+
+        <div class="content">
+            <div class="headerblock">
+                <p class="mega">Knowledge Base</p>
+                <p class="mini">Need help with SGDG stuff? We got you covered.</p>
+            </div>
+
+            <div class="kb-section">
+                <p class="title">SGDG Profiles</p>
+                <p><a href="/kb/about-profiles">What are SGDG Profiles?</a></p>
+                <p><a href="/kb/create-profile">Creating your SGDG Profile</a></p>
+                <p><a href="/kb/manage-profile">Managing your SGDG Profile</a></p>
+            </div>
+            <div class="kb-section">
+                <p class="title">SGDG Projects</p>
+                <p>Starting a project through SGDG</p>
+                <p>Using the GitHub org</p>
+            </div>
+            <div class="kb-section">
+                <p class="title">SGDG Search</p>
+                <p><a href="/kb/search">Using SGDG Search</a></p>
+            </div>
+        </div>
+
+        <div id="footer"></div>
+    </body>
+</html>

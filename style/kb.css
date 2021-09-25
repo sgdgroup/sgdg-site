@@ -1,0 +1,84 @@
+.kb-section {
+    font-family: Poppins;
+    text-align: center;
+    padding: 25px;
+}
+
+.kb-section p {
+    font-size: 18px;
+    color: gray;
+}
+
+.kb-section .title {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+.kb-section a {
+    text-decoration: none;
+    color: #3498DB;
+    opacity: 1;
+    font-size: 18px;
+}
+
+.kb-section a:hover {
+    opacity: 0.6;
+}
+
+.kb-article-header {
+    font-family: Poppins;
+    text-align: center;
+    padding: 25px;
+}
+
+.kb-article-header .kb {
+    font-size: 14px;
+}
+
+.kb-article-header .subject {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.kb-article-section {
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: Poppins;
+    font-weight: normal;
+    font-size: 16px;
+    text-align: left;
+    padding: 10px 0;
+    line-height: 2;
+}
+
+.kb-article-section .h {
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.kb-article-section a {
+    text-decoration: none;
+    color: #3498DB;
+    opacity: 1;
+    font-size: 16px;
+}
+
+.kb-article-section a:hover {
+    opacity: 0.6;
+}
+
+.kb-article-section p {
+    padding: 16px 0;
+}
+
+.kb-article-section .mid {
+    color: gray;
+}
+
+.kb-article-section li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

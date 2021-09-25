@@ -48,7 +48,7 @@ var pages = document.getElementById("nav-links").getElementsByTagName('a');
 
 for (var i = 0; i < pages.length; i++) {
 
-    if (window.location.pathname === pages[i].getAttribute('href')) {
+    if (window.location.pathname.startsWith(pages[i].getAttribute('href'))) {
 
         pages[i].className += " active";
 
