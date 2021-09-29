@@ -63,6 +63,28 @@ window.onload = function() {
         res.appendChild(data[i].element);
     }
 
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    const params = Object.fromEntries(urlSearchParams.entries());
+    if (params['f']) {
+        let filter = params['f'];
+        console.log(filter);
+        document.getElementById('searchprojects').checked = false;
+        document.getElementById('searchpeople').checked = false;
+        document.getElementById('searchevents').checked = false;
+        if (filter.includes('p')) {
+            document.getElementById('searchprojects').checked = true;
+        }
+        if (filter.includes('u')) {
+            document.getElementById('searchpeople').checked = true;
+        }
+        if (filter.includes('e')) {
+            document.getElementById('searchevents').checked = true;
+        }
+    }
+    if (params['q']) {
+        document.getElementById('searchbox').value = params['q'];
+    }
+
     search();
 
 }
