@@ -7,6 +7,12 @@
     margin: 0 auto;
     max-width: 1000px;
 }
+
+#user a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .name {
     font-family: Poppins;
     font-size: 32px;
