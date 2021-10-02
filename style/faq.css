@@ -1,0 +1,44 @@
+.faq-section {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-section .large {
+    font-weight: bold;
+    font-size: 28px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.faq-section .collapse {
+    background-color: gainsboro;
+    cursor: pointer;
+    padding: 20px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    margin: 0 auto;
+    outline: none;
+    font-family: Poppins;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.faq-section .collapse:hover {
+    background-color: silver;
+}
+
+.faq-section .inner-content {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: whitesmoke;
+    font-family: Poppins;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.faq-section .spacer {
+    padding: 10px;
+}
