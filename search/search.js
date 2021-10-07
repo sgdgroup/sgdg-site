@@ -30,28 +30,44 @@ function prepare() {
 
     allSkills = sk.skills;
 
-    let pr = jsonData.projects;
-
     checkboxProjects = document.getElementById('searchprojects');
     checkboxPeople = document.getElementById('searchpeople');
     checkboxEvents = document.getElementById('searchevents');
 
-    for (let i = 0; i < pr.length; i++) {
-        let item = pr[i];
-        data.push(
+    // yes ik adding to the array and then sorting separately is inefficient
+
+    // i plan on maintaining alphabetical order in the actual backend registry
+    // (inserting in alphabetical order on project/profile creation)
+
+    // for now, this will do lol
+
+    let pr = jsonData.projects;
+    let prData = [];
+    let prKeys = Object.keys(pr);
+
+    for (let i = 0; i < prKeys.length; i++) {
+        let item = pr[prKeys[i]];
+        prData.push(
             new ProjectItem(item.name, item.url, item.type, item.description)
         );
     }
 
-    let pe = jsonData.people;
+    prData.sort((f, s) => f.name.toLowerCase().localeCompare(s.name.toLowerCase()));
 
+    let pe = jsonData.people;
+    let peData = [];
     let peKeys = Object.keys(pe);
+
     for (let i = 0; i < peKeys.length; i++) {
         let item = pe[peKeys[i]];
-        data.push(
+        peData.push(
             new PersonItem(item.name, item.url, item.role, item.description, item.skills)
         );
     }
+
+    peData.sort((f, s) => f.name.toLowerCase().localeCompare(s.name.toLowerCase()));
+
+    data = data.concat(prData, peData);
 
 }
 
@@ -67,7 +83,6 @@ window.onload = function() {
     const params = Object.fromEntries(urlSearchParams.entries());
     if (params['f']) {
         let filter = params['f'];
-        console.log(filter);
         document.getElementById('searchprojects').checked = false;
         document.getElementById('searchpeople').checked = false;
         document.getElementById('searchevents').checked = false;
