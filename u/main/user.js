@@ -12,7 +12,7 @@ function load(username) {
         sk = JSON.parse(read('https://auth.dilanxd.com/sgdg/api?q=skills'));
     } catch (e) {
         document.getElementById('noconnect').style.display = '';
-        document.getElementById('noconnect').innerText = 'Unable to connect to the SGDG API. (ERROR WG100)';
+        document.getElementById('noconnect').innerText = 'Unable to connect to the SGDG API. (WG100)';
         return;
     }
 
