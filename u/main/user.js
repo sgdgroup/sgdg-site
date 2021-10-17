@@ -8,8 +8,8 @@ var userDiv = document.getElementById('user');
 function load(username) {
     let sk = null;
     try {
-        user = JSON.parse(read(`https://auth.dilanxd.com/sgdg/api?q=user&u=${username}`));
-        sk = JSON.parse(read('https://auth.dilanxd.com/sgdg/api?q=skills'));
+        user = JSON.parse(read(`https://portal.sgdgroup.org/api/user?name=${username}`));
+        sk = JSON.parse(read('https://portal.sgdgroup.org/api/skills'));
     } catch (e) {
         document.getElementById('noconnect').style.display = '';
         document.getElementById('noconnect').innerText = 'Unable to connect to the SGDG API. (WG100)';

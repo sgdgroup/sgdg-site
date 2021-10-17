@@ -8,7 +8,7 @@ var checkboxEvents;
 function prepare() {
     let info = null;
     try {
-        info = read('https://auth.dilanxd.com/sgdg/api?q=all');
+        info = read('https://portal.sgdgroup.org/api/registry');
     } finally {
         if (!info) {
             document.getElementById('noconnect').style.display = '';
@@ -20,7 +20,7 @@ function prepare() {
 
     let sk = null;
     try {
-        sk = JSON.parse(read('https://auth.dilanxd.com/sgdg/api?q=skills'));
+        sk = JSON.parse(read('https://portal.sgdgroup.org/api/skills'));
     } finally {
         if (!sk) {
             document.getElementById('noconnect').style.display = '';
