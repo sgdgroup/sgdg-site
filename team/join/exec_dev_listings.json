@@ -1,0 +1,23 @@
+{
+    "listing": [
+        {
+            "name": "Test Listing",
+            "sub": "EXECUTIVE TEAM",
+            "desc": "Executive team and development team listings will be added soon.",
+            "color": "green",
+            "desc_sub": "OPEN POSITION",
+            "button": {
+                "enabled": false,
+                "text": "Unavailable",
+                "link": "https://sgdgroup.org/test"
+            }
+
+        }
+    ],
+
+    "colors": {
+        "red": "#ED4245",
+        "green": "#05B384"
+    }
+
+}

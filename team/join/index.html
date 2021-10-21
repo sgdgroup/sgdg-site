@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Join the team - SGDG</title>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://unpkg.com/feather-icons"></script>
+
+        <link rel="stylesheet" href="https://dilanxd.com/style/style.css">
+        <link rel="stylesheet" href="/style/listings.css">
+
+
+        <script>
+            $(function(){
+              $("#header").load("/header/header.html");
+            });
+        </script>
+
+    </head>
+
+    <body>
+        <div id="header"></div>
+        <div class="content">
+            <div class="section">
+                <p class="large">Join the SGDG executive or development teams!</p>
+                <p class="normal">Be a part of the teams that help SGDG run. Apply to any position(s) you're interested in.</p>
+                <p class="dim">Click on a position to reveal more information.</p>
+
+            </div>
+
+            <div id="listing"></div>
+
+            <script src="/scripts/listings.js"></script>
+            <script>
+                loadListing('exec_dev_listings.json');
+            </script>
+        </div>
+    </body>
+</html>

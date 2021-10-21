@@ -1,0 +1,103 @@
+#listing {
+    display: block;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.listing-item {
+    border-radius: 8px;
+    background-color: whitesmoke;
+    margin: 20px 0;
+    position: relative;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.listing-item .main-button {
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: left;
+    margin: 0 auto;
+    outline: none;
+    border: none;
+    font-family: Poppins;
+    border-radius: 6px;
+    opacity: 1;
+    transition: 0.3s ease-out;
+    position: relative;
+}
+
+.listing-item .main-button:hover {
+    opacity: 0.8;
+}
+
+.listing-item .main-button.active {
+    opacity: 0.8;
+}
+
+.listing-item .name {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.listing-item .sub {
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+    opacity: 0.8;
+}
+
+.listing-item .link-button {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    color: black;
+    padding: 10px 20px;
+    text-align: left;
+    margin: 0 auto;
+    outline: none;
+    border: none;
+    font-family: Poppins;
+    border-radius: 6px;
+    opacity: 1;
+    transition: 0.3s ease-out;
+    text-decoration: none;
+    background-color: white;
+    font-size: 14px;
+    width: 100px;
+    text-align: center;
+}
+
+.listing-item .link-button:hover {
+    opacity: 0.6;
+}
+
+.listing-item .link-button.disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+.listing-item .inner {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    padding: 0 20px;
+}
+
+.listing-item .inner .text {
+    color: black;
+    font-size: 14px;
+    margin: 0;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.listing-item .inner .sub {
+    font-size: 14px;
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: 800;
+    text-align: right;
+}
