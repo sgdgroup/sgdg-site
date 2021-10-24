@@ -8,9 +8,21 @@ function loadListing(file) {
     let colors = data['colors'];
 
     let listing = data.listing;
+
+    let last = null;
+
     for (let i = 0; i < listing.length; i++) {
 
         let curr = listing[i];
+        if (curr.repeat && curr.repeat == "last") {
+            if (last == null) {
+                console.log(`Can't repeat last listing if there hasn't been one yet.`);
+                return;
+            }
+            curr = last;
+        } else {
+            last = curr;
+        }
 
         let lDiv = document.createElement('div');
         lDiv.id = `listing-div-${i}`;
@@ -52,6 +64,7 @@ function loadListing(file) {
         lLink.innerText = curr.button.text;
         if (curr.button.enabled) {
             lLink.href = curr.button.link;
+            lLink.target = '_blank';
         }
         lDiv.appendChild(lLink);
 
@@ -61,7 +74,12 @@ function loadListing(file) {
 
         let lInner_text = document.createElement('p');
         lInner_text.className = 'text';
-        lInner_text.innerText = curr.desc;
+        let lInner_text_html = '';
+        let desc = curr.desc;
+        for (let i = 0; i < desc.length; i++) {
+            lInner_text_html += desc[i] + '<br>';
+        }
+        lInner_text.innerHTML = lInner_text_html;
         lInner.appendChild(lInner_text);
 
         let lInner_sub = document.createElement('p');

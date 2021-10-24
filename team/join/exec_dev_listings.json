@@ -1,9 +1,153 @@
 {
     "listing": [
         {
+            "name": "Secretary",
+            "sub": "EXECUTIVE TEAM",
+            "desc": [
+                "The secretary is in charge of the membership system and maintaining official documents. They work with the president to make sure most official Northwestern-related stuff is maintained (communicating with and providing required documents to Northwestern SOA, etc.).",
+                "",
+                "<b>What you'll do</b>",
+                "- Use Google Sheets, Wildcat Connection, GitHub, our mailing system, and the command line to register new members and manage data as necessary.",
+                "- Work with the president to maintain official SGDG documentation and communicate with Northwestern SOA as needed.",
+                "- Keep track of everything going on in the organization."
+            ],
+            "color": "green",
+            "desc_sub": "OPEN POSITION",
+            "button": {
+                "enabled": true,
+                "text": "Apply",
+                "link": "https://portal.sgdgroup.org/forms?f=exec-app"
+            }
+        },
+        {
+            "name": "Treasurer",
+            "sub": "EXECUTIVE TEAM",
+            "desc": [
+                "The treasurer is in charge of all financial aspects of SGDG (getting money, spending money, keeping track of money, etc.).",
+                "",
+                "<b>What you'll do</b>",
+                "- When we need money, you'll need to figure out the best way to get it.",
+                "- Manage the budget and keep track of all of the money we spent.",
+                "- Work with the Northwestern Student Organization Financial Office as needed."
+            ],
+            "color": "green",
+            "desc_sub": "OPEN POSITION",
+            "button": {
+                "enabled": true,
+                "text": "Apply",
+                "link": "https://portal.sgdgroup.org/forms?f=exec-app"
+            }
+        },
+        {
+            "name": "Communications Director",
+            "sub": "EXECUTIVE TEAM",
+            "desc": [
+                "The communications director is in charge of communication (wow what a surprise) and marketing through our various presences both online and in real life. You'll work with the president to expand the presence of SGDG.",
+                "",
+                "<b>What you'll do</b>",
+                "- Design and send emails/newsletters using our mailing system.",
+                "- Share announcements and events on our Discord server as necessary.",
+                "- Design ads for recruitment and events for sharing online and register those ads for in-person advertising.",
+                "- Keep all of our social media presence up-to-date and looking good.",
+                "- Maintain our branding and design to grow the recognizability of SGDG things."
+            ],
+            "color": "green",
+            "desc_sub": "OPEN POSITION",
+            "button": {
+                "enabled": true,
+                "text": "Apply",
+                "link": "https://portal.sgdgroup.org/forms?f=exec-app"
+            }
+        },
+        {
+            "name": "Events Director",
+            "sub": "EXECUTIVE TEAM",
+            "desc": [
+                "The events director is in charge of creating and coordinating SGDG events. You'll work with the president and the rest of the exec team (and perhaps all members) to think of good event ideas and make them happen.",
+                "",
+                "<b>What you'll do</b>",
+                "- Help create and coordinate SGDG events, whether they be software/game dev related or fun social events.",
+                "- Work with other members of the exec team to make sure the event is advertised properly, costs are covered, and that records are kept."
+            ],
+            "color": "green",
+            "desc_sub": "OPEN POSITION",
+            "button": {
+                "enabled": true,
+                "text": "Apply",
+                "link": "https://portal.sgdgroup.org/forms?f=exec-app"
+            }
+        },
+        {
+            "name": "Developer",
+            "sub": "DEVELOPMENT TEAM",
+            "desc": [
+                "Developers help create and maintain the SGDG web system (website, portal, etc.). We listed possible things you'll do as a developer below, but things vary depending on where your skills lie. We hope that you'll have some experience with at least a couple of the things you'll use, but if you'll still be considered if you have a strong interest and are willing to put in the time to learn the various technologies.",
+                "",
+                "<b>What you'll do</b>",
+                "- Create new features for the SGDG website and portal, as well as maintain their existing features. This is just one bullet point but it's a lot!",
+                "",
+                "<b>What you'll use</b>",
+                "- JavaScript with Node.js and Express, and the Pug template engine (backend)",
+                "- HTML, CSS, and JavaScript (frontend)",
+                "- The Unix shell (command line) on a remote server",
+                "- Git",
+                "- Some more things that you might already know or should be willing to learn"
+            ],
+            "color": "green",
+            "desc_sub": "OPEN POSITION",
+            "button": {
+                "enabled": true,
+                "text": "Apply",
+                "link": "https://portal.sgdgroup.org/forms?f=dev-app"
+            }
+        },
+        {
+            "repeat": "last"
+        },
+        {
+            "repeat": "last"
+        },
+        {
+            "name": "Designer",
+            "sub": "DEVELOPMENT TEAM",
+            "desc": [
+                "Designers help make everything look nice across the SGDG web system. HTML and CSS experience isn't necessarily required, but you probably will be using them (so experience is nice, but be willing to put in the time to learn as needed). You'll be able to work with the developers to incorporate your ideas into the system.",
+                "",
+                "<b>What you'll do</b>",
+                "- Maintain the minimal, modern look of SGDG and improve it.",
+                "- Think of ways to make the website and the portal UI look as nice and clean as possible.",
+                "- Incorporate your ideas into the system with help from the developers.",
+                "",
+                "<b>What you'll use</b>",
+                "- HTML and CSS",
+                "- Other design tools and resources that are good (lol sorry for not being specific)"
+            ],
+            "color": "green",
+            "desc_sub": "OPEN POSITION",
+            "button": {
+                "enabled": true,
+                "text": "Apply",
+                "link": "https://portal.sgdgroup.org/forms?f=dev-app"
+            }
+        }
+    ],
+
+    "colors": {
+        "red": "#ED4245",
+        "green": "#05B384"
+    },
+
+    "template": [
+        {
             "name": "Test Listing",
             "sub": "EXECUTIVE TEAM",
-            "desc": "Executive team and development team listings will be added soon.",
+            "desc": [
+                "Executive team and development team listings will be added soon.",
+                "Test",
+                "",
+                "<b>Bold text</b>",
+                "Test"
+            ],
             "color": "green",
             "desc_sub": "OPEN POSITION",
             "button": {
@@ -11,13 +155,7 @@
                 "text": "Unavailable",
                 "link": "https://sgdgroup.org/test"
             }
-
         }
-    ],
-
-    "colors": {
-        "red": "#ED4245",
-        "green": "#05B384"
-    }
+    ]
 
 }
