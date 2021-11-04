@@ -16,7 +16,7 @@
             "button": {
                 "enabled": true,
                 "text": "Apply",
-                "link": "https://portal.sgdgroup.org/forms?f=exec-app"
+                "link": "https://portal.sgdgroup.org/forms/exec-app"
             }
         },
         {
@@ -35,7 +35,7 @@
             "button": {
                 "enabled": true,
                 "text": "Apply",
-                "link": "https://portal.sgdgroup.org/forms?f=exec-app"
+                "link": "https://portal.sgdgroup.org/forms/exec-app"
             }
         },
         {
@@ -56,7 +56,7 @@
             "button": {
                 "enabled": true,
                 "text": "Apply",
-                "link": "https://portal.sgdgroup.org/forms?f=exec-app"
+                "link": "https://portal.sgdgroup.org/forms/exec-app"
             }
         },
         {
@@ -74,7 +74,7 @@
             "button": {
                 "enabled": true,
                 "text": "Apply",
-                "link": "https://portal.sgdgroup.org/forms?f=exec-app"
+                "link": "https://portal.sgdgroup.org/forms/exec-app"
             }
         },
         {
@@ -98,7 +98,7 @@
             "button": {
                 "enabled": true,
                 "text": "Apply",
-                "link": "https://portal.sgdgroup.org/forms?f=dev-app"
+                "link": "https://portal.sgdgroup.org/forms/dev-app"
             }
         },
         {
@@ -127,7 +127,7 @@
             "button": {
                 "enabled": true,
                 "text": "Apply",
-                "link": "https://portal.sgdgroup.org/forms?f=dev-app"
+                "link": "https://portal.sgdgroup.org/forms/dev-app"
             }
         }
     ],

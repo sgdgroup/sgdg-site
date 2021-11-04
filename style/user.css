@@ -42,10 +42,6 @@
     padding-left: 50px;
 }
 
-.about-text {
-
-}
-
 .skills {
     padding: 20px 50px;
 }
@@ -56,10 +52,6 @@
 
 .extra {
     padding: 20px 50px;
-}
-
-.extra-text {
-
 }
 
 .cards {
@@ -95,13 +87,13 @@
 .card {
     width: 150px;
     height: auto;
-    box-shadow: 0 2px 4px 0 #00000032, 0 2px 8px 0 #00000030;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .long-card {
     width: 250px;
     height: auto;
-    box-shadow: 0 2px 4px 0 #00000032, 0 2px 8px 0 #00000030;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .card:hover {
