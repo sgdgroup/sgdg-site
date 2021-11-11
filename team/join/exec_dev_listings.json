@@ -78,6 +78,26 @@
             }
         },
         {
+            "name": "Competitive Programming Director",
+            "sub": "EXECUTIVE TEAM",
+            "desc": [
+                "The competitive programming director is in charge of managing the entire competitive programming and game jam scene within SGDG, including finding competition opportunities, finding and interviewing people to form team(s), and registering the team(s) for the competitions.",
+                "",
+                "<b>What you'll do</b>",
+                "- Find competitive programming, hackathon, and game jam opportunities.",
+                "- Communicate with SGDG members about various opportunities.",
+                "- Invite and potentially interview those interested in competitive programming for a team.",
+                "- Registering team(s) to represent SGDG/Northwestern at the competitions and manage our presence throughout."
+            ],
+            "color": "red",
+            "desc_sub": "POSITION FILLED",
+            "button": {
+                "enabled": false,
+                "text": "Unavailable",
+                "link": "https://portal.sgdgroup.org/forms/exec-app"
+            }
+        },
+        {
             "name": "Developer",
             "sub": "DEVELOPMENT TEAM",
             "desc": [
