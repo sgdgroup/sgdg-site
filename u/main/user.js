@@ -39,7 +39,12 @@ function name() {
 
     let avatar = document.createElement('img');
     avatar.className = 'avatar';
-    avatar.setAttribute('src', `https://www.gravatar.com/avatar/` + user.gravatar_hash + '?s=150&d=mp');
+    avatar.src = user.avatar;
+    avatar.width = '128';
+    avatar.height = '128';
+    avatar.onerror = () => {
+        avatar.src = 'https://gravatar.com/avatar/?s=128&d=mp';
+    }
     div.appendChild(avatar);
 
     let name = document.createElement('p');
