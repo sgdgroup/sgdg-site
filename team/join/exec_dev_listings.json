@@ -11,11 +11,11 @@
                 "- Work with the president to maintain official SGDG documentation and communicate with Northwestern SOA as needed.",
                 "- Keep track of everything going on in the organization."
             ],
-            "color": "green",
-            "desc_sub": "OPEN POSITION",
+            "color": "red",
+            "desc_sub": "POSITION FILLED",
             "button": {
-                "enabled": true,
-                "text": "Apply",
+                "enabled": false,
+                "text": "Unavailable",
                 "link": "https://portal.sgdgroup.org/forms/exec-app"
             }
         },
@@ -30,11 +30,11 @@
                 "- Manage the budget and keep track of all of the money we spent.",
                 "- Work with the Northwestern Student Organization Financial Office as needed."
             ],
-            "color": "green",
-            "desc_sub": "OPEN POSITION",
+            "color": "red",
+            "desc_sub": "POSITION FILLED",
             "button": {
-                "enabled": true,
-                "text": "Apply",
+                "enabled": false,
+                "text": "Unavailable",
                 "link": "https://portal.sgdgroup.org/forms/exec-app"
             }
         },
@@ -51,11 +51,11 @@
                 "- Keep all of our social media presence up-to-date and looking good.",
                 "- Maintain our branding and design to grow the recognizability of SGDG things."
             ],
-            "color": "green",
-            "desc_sub": "OPEN POSITION",
+            "color": "orange",
+            "desc_sub": "POSITION MAY BE AVAILABLE. CONTACT PRESIDENT.",
             "button": {
-                "enabled": true,
-                "text": "Apply",
+                "enabled": false,
+                "text": "Unavailable",
                 "link": "https://portal.sgdgroup.org/forms/exec-app"
             }
         },
@@ -69,11 +69,11 @@
                 "- Help create and coordinate SGDG events, whether they be software/game dev related or fun social events.",
                 "- Work with other members of the exec team to make sure the event is advertised properly, costs are covered, and that records are kept."
             ],
-            "color": "green",
-            "desc_sub": "OPEN POSITION",
+            "color": "orange",
+            "desc_sub": "POSITION MAY BE AVAILABLE. CONTACT PRESIDENT.",
             "button": {
-                "enabled": true,
-                "text": "Apply",
+                "enabled": false,
+                "text": "Unavailable",
                 "link": "https://portal.sgdgroup.org/forms/exec-app"
             }
         },
@@ -154,7 +154,8 @@
 
     "colors": {
         "red": "#ED4245",
-        "green": "#05B384"
+        "green": "#05B384",
+        "orange": "#E3963E"
     },
 
     "template": [
