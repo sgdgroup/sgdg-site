@@ -51,26 +51,8 @@
                 "- Keep all of our social media presence up-to-date and looking good.",
                 "- Maintain our branding and design to grow the recognizability of SGDG things."
             ],
-            "color": "orange",
-            "desc_sub": "POSITION MAY BE AVAILABLE. CONTACT PRESIDENT.",
-            "button": {
-                "enabled": false,
-                "text": "Unavailable",
-                "link": "https://portal.sgdgroup.org/forms/exec-app"
-            }
-        },
-        {
-            "name": "Events Director",
-            "sub": "EXECUTIVE TEAM",
-            "desc": [
-                "The events director is in charge of creating and coordinating SGDG events. You'll work with the president and the rest of the exec team (and perhaps all members) to think of good event ideas and make them happen.",
-                "",
-                "<b>What you'll do</b>",
-                "- Help create and coordinate SGDG events, whether they be software/game dev related or fun social events.",
-                "- Work with other members of the exec team to make sure the event is advertised properly, costs are covered, and that records are kept."
-            ],
-            "color": "orange",
-            "desc_sub": "POSITION MAY BE AVAILABLE. CONTACT PRESIDENT.",
+            "color": "red",
+            "desc_sub": "POSITION FILLED",
             "button": {
                 "enabled": false,
                 "text": "Unavailable",
