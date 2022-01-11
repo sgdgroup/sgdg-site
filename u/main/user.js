@@ -92,13 +92,23 @@ function skills() {
     let skillList = document.createElement('div');
     skillList.className = 'cards';
 
-
     let skills = user.skills;
-    for (let i = 0; i < skills.length; i++) {
-        let skill = document.createElement('div');
-        skill.className = 'card';
 
+    if (skills.length === 0) {
+        let nothing = document.createElement('p');
+        nothing.className = 'nothing';
+        nothing.innerText = `There's nothing here.`;
+        div.appendChild(nothing);
+    }
+
+    for (let i = 0; i < skills.length; i++) {
         let skillItem = allSkills[skills[i]];
+        
+        let skill = document.createElement('div');
+        skill.className = 'skill-card';
+        skill.style.border = `1px solid ${skillItem.color}`;
+        skill.style.color = skillItem.color;
+
         let icon = document.createElement('i');
         icon.className = 'card-icon';
         icon.setAttribute('data-feather', skillItem.icon);
@@ -131,12 +141,18 @@ function links() {
     div.appendChild(title);
 
     let linkList = document.createElement('div');
-    linkList.className = 'long-cards linked';
+    linkList.className = 'cards';
 
 
     let linkSection = user.links;
     let links = Object.keys(linkSection);
 
+    if (links.length === 0) {
+        let nothing = document.createElement('p');
+        nothing.className = 'nothing';
+        nothing.innerText = `There's nothing here.`;
+        div.appendChild(nothing);
+    }
 
     for (let i = 0; i < links.length; i++) {
 
@@ -144,14 +160,9 @@ function links() {
         let linkValue = linkSection[linkKey];
         let linkStatic = allLinks[linkKey];
 
-        let anchor = document.createElement('a');
-        anchor.className = 'card-link';
-        if (linkStatic.url) {
-            anchor.setAttribute('href', linkStatic.url.replaceAll('%VALUE%', linkValue));
-        }
-
-        let link = document.createElement('div');
-        link.className = 'long-card linked';
+        let link = document.createElement('a');
+        if (linkStatic.url) link.href = linkStatic.url.replaceAll('%VALUE%', linkValue);
+        link.className = 'link-card';
 
         let icon = document.createElement('i');
         icon.className = linkStatic.icon;
@@ -167,8 +178,7 @@ function links() {
         value.innerText = linkValue;
         link.appendChild(value);
 
-        anchor.appendChild(link);
-        linkList.appendChild(anchor);
+        linkList.appendChild(link);
     }
 
     div.appendChild(linkList);
@@ -190,7 +200,13 @@ function extra() {
     let extraSection = user.extra;
     let extra = Object.keys(extraSection);
 
-    let extraList = document.createElement('div');
+    if (extra.length === 0) {
+        let nothing = document.createElement('p');
+        nothing.className = 'nothing';
+        nothing.innerText = `There's nothing here.`;
+        div.appendChild(nothing);
+    }
+
     for (let i = 0; i < extra.length; i++) {
 
         let extraKey = extra[i];

@@ -73,7 +73,7 @@ function prepare() {
 
 window.onload = function() {
 
-    var res = document.getElementById('searchresults');
+    var res = document.getElementById('search-results');
 
     for (let i = 0; i < data.length; i++) {
         res.appendChild(data[i].element);
@@ -97,7 +97,7 @@ window.onload = function() {
         }
     }
     if (params['q']) {
-        document.getElementById('searchbox').value = params['q'];
+        document.getElementById('search-box').value = params['q'];
     }
 
     search();
@@ -106,7 +106,7 @@ window.onload = function() {
 
 function search() {
 
-    var inputField = document.getElementById('searchbox');
+    var inputField = document.getElementById('search-box');
 
     var showAny = false;
 
@@ -218,8 +218,9 @@ class ProjectItem {
         this.type = type;
         this.description = description;
 
-        var element = document.createElement('div');
-        element.setAttribute('class', 'searchblock');
+        var element = document.createElement('a');
+        element.href = url;
+        element.setAttribute('class', 'search-block project');
 
         var s1 = document.createElement('span');
         s1.setAttribute('class', 'notscream');
@@ -230,12 +231,9 @@ class ProjectItem {
         p1.appendChild(s1);
         element.appendChild(p1);
 
-        var a2 = document.createElement('a');
-        a2.setAttribute('href', url);
-        a2.textContent = name;
         var p2 = document.createElement('p');
         p2.setAttribute('class', 'main');
-        p2.appendChild(a2);
+        p2.textContent = name;
         element.appendChild(p2);
 
         var p3 = document.createElement('p');
@@ -257,8 +255,9 @@ class PersonItem {
         this.description = description;
         this.skills = skills;
 
-        let element = document.createElement('div');
-        element.setAttribute('class', 'searchblock');
+        let element = document.createElement('a');
+        element.href = url;
+        element.setAttribute('class', 'search-block person');
 
         let typeSpan = document.createElement('span');
         typeSpan.setAttribute('class', 'notscream');
@@ -269,13 +268,9 @@ class PersonItem {
         typeP.appendChild(typeSpan);
         element.appendChild(typeP);
 
-        let nameLink = document.createElement('a');
-        nameLink.setAttribute('href', url);
-        nameLink.textContent = name;
-
         let nameP = document.createElement('p');
+        nameP.textContent = name;
         nameP.setAttribute('class', 'main');
-        nameP.appendChild(nameLink);
         element.appendChild(nameP);
 
         let skillsDiv = document.createElement('div');

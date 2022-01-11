@@ -1,11 +1,8 @@
-#searchbar {
-
+#search-bar {
     text-align: center;
-
 }
 
-#searchbox {
-
+#search-box {
     margin: auto;
     width: 400px;
     max-width: 500px;
@@ -16,52 +13,54 @@
     font-family: Poppins;
     font-size: 25px;
     outline: none;
-
 }
 
-#searchbox :focus {
-
+#search-box :focus {
     outline: none;
-
 }
 
-#searchresults {
-
+#search-results {
     margin-top: 100px;
     padding: 0 15px 0 15px;
-
 }
 
-#searchoptions {
-
+#search-options {
     padding-top: 20px;
     font-size: 16px;
     vertical-align: middle;
-
 }
 
-#searchoptions label {
-
+#search-options label {
     padding-left: 0;
     padding-right: 10px;
-
 }
 
-.searchblock {
-
+.search-block {
     max-width: 500px;
     min-height: 100px;
     position: relative;
     display: block;
     background-color: #FFFFFF;
-    margin: 10px auto;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    margin: 20px auto;
     padding: 10px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     white-space: nowrap;
-
+    text-decoration: none;
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 
-.searchblock a {
+.search-block.project:hover {
+    border: 2px solid #E97451;
+}
+
+.search-block.person:hover {
+    border: 2px solid #3498DB;
+}
+
+/*
+.search-block a {
 
     text-decoration: none;
     display: inline-block;
@@ -70,7 +69,7 @@
 
 }
 
-.searchblock a:after {
+.search-block a:after {
 
     display: block;
     content: '';
@@ -81,28 +80,25 @@
 
 }
 
-.searchblock a:hover:after {
+.search-block a:hover:after {
     transform: scaleX(1);
     transform-origin: 0% 50%;
 }
+*/
 
-.searchblock .mini {
-
+.search-block .mini {
     font-size: 16px;
     text-align: right;
     margin: 0;
-
 }
 
-.searchblock .main {
-
+.search-block .main {
     font-weight: bold;
     font-size: 24px;
     text-align: left;
     margin: 0;
     margin-right: 10px;
     display: inline-block;
-
 }
 
 .skills {
@@ -122,60 +118,47 @@
 
 .skill-icon:hover {
     color: blue;
+    cursor: default;
 }
 
-.searchblock .sub {
-
+.search-block .sub {
     font-weight: 800;
     font-size: 14px;
     text-align: left;
-
-
-
 }
 
-.searchblock .sub .notscream {
-
+.search-block .sub .notscream {
     font-weight: normal;
-
 }
 
-.searchblock .moresub {
-
+.search-block .moresub {
     font-weight: normal;
     font-size: 16px;
     text-align: left;
     max-width: 100%;
     line-height: 20px;
     overflow: hidden;
-
 }
 
-.searchblock .vertical {
-
+.search-block .vertical {
     border-left: 6px solid green;
     height: 500px;
-
 }
 
 .searchline {
-
     max-width: 200px;
     color: black;
     text-align: center;
     border: 1px solid gray;
     margin-top: 5px;
     margin-bottom: 5px;
-
 }
 
 .largesearchline {
-
     max-width: 400px;
     color: black;
     text-align: center;
     border: 1px solid black;
     margin-top: 5px;
     margin-bottom: 5px;
-
 }

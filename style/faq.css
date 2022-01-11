@@ -39,6 +39,15 @@
     font-size: 18px;
 }
 
+.faq-section .inner-content a {
+    text-decoration: none;
+    color: #3498DB;
+}
+
+.faq-section .inner-content a:hover {
+    text-decoration: underline;
+}
+
 .faq-section .spacer {
     padding: 10px;
 }
