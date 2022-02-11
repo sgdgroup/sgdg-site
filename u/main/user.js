@@ -215,7 +215,14 @@ function extra() {
 
         let text = document.createElement('p');
         text.className = 'extra-text';
-        text.innerHTML = `<span style="font-weight: bold;">${extraDisplay}: </span>${extraValue}`;
+
+        let textSpan = document.createElement('span');
+        textSpan.style.fontWeight = 'bold';
+        textSpan.innerText = `${extraDisplay}: `;
+        text.appendChild(textSpan);
+
+        text.appendChild(document.createTextNode(extraValue));
+
         div.appendChild(text);
     }
 
