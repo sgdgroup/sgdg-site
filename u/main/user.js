@@ -224,7 +224,7 @@ function extra() {
         text.appendChild(document.createTextNode(extraValue));
 
         div.appendChild(text);
-        
+
     }
 
     userDiv.appendChild(div);
